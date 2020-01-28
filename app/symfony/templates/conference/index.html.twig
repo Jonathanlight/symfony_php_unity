@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Conference{% endblock %}
+
+{% block body %}
+    <h1>Conference</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Location</th>
+                <th>Created</th>
+                <th>Price</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for conference in conferences %}
+            <tr>
+                <td>{{ conference.id }}</td>
+                <td>{{ conference.title }}</td>
+                <td>{{ conference.location }}</td>
+                <td>{{ conference.created ? conference.created|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ conference.price }}</td>
+                <td>
+                    <a href="{{ path('conference_show', {'id': conference.id}) }}">show</a>
+                    <a href="{{ path('conference_edit', {'id': conference.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('conference_new') }}" class="btn btn-primary">Create new</a>
+{% endblock %}

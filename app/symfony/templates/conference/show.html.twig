@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Conference{% endblock %}
+
+{% block body %}
+    <h1>Conference</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ conference.id }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ conference.title }}</td>
+            </tr>
+            <tr>
+                <th>Location</th>
+                <td>{{ conference.location }}</td>
+            </tr>
+            <tr>
+                <th>Created</th>
+                <td>{{ conference.created ? conference.created|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>{{ conference.price }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('conference_index') }}" class="btn btn-dark">back to list</a>
+
+    <a href="{{ path('conference_edit', {'id': conference.id}) }}" class="btn btn-secondary">edit</a>
+
+    {{ include('conference/_delete_form.html.twig') }}
+{% endblock %}

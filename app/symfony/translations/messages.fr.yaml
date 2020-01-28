@@ -1,0 +1,25 @@
+form:
+    title: 'Titre'
+    location: 'Adresse'
+    price: 'Prix'
+    created: '2019-10-20'
+    action:
+        edit: 'Modification'
+        delete: 'Supprimer'
+        submit: 'Enregistrer'
+        send: 'Envoyer'
+message:
+    flash:
+        updatepassword: 'Votre mot de passe a bien été modifier .'
+        resetpassword: 'Démande de réinitialisation validée.'
+        resetpasswordsave: 'Démande de réinitialisation enregistrée.'
+        resetpasswordnosave: 'Demande de réinitialisation non enregistrée.'
+        passwordForgetAsk: 'Consultez vos e-mails et dans votre boîte de courriers indésirables.'
+        mailNotFound: 'E-mail non trouvé !'
+        submissionOk: 'Votre message a bien été envoyé. Nous allons le traiter dans les plus brefs délais.'
+        passwordForget: 'Mot de passe modifié'
+        passwordIdentique: 'Vérifiez que les deux mot de passe soient bien identiques'
+        lienValide: 'Ce lien est non-valide !'
+        compteValide: 'Votre compte est validé'
+        compteDejaValide: 'Votre compte a déjà été validé'
+        lienDuComptInvalide: 'Ce lien est invalide merci de fermer cette page !'
