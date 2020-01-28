@@ -4,6 +4,8 @@
 !app/cache/.gitkeep
 !app/logs/.gitkeep
 
+.idea/*
+
 # Email spool folder
 /app/spool/*
 
